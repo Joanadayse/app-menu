@@ -1,0 +1,7 @@
+{
+  "name": "app-menu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
