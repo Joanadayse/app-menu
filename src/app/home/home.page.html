@@ -1,20 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>
+        <img src="../../assets/img/logo-text1.png" />
+      </ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list style="align-items: baseline">
+      <ion-item-sliding>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+         
+
+      
+        
+          <ion-item [button]="true" color="light">
+            <ion-icon name="home-outline"></ion-icon>
+            <ion-label style="margin-left: 20px">Home</ion-label>
+          </ion-item>
+       
+
+        <ion-item [button]="true" (click)="  paginaEmpresa()">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <ion-label style="margin-left: 20px">Empresa</ion-label>
+        </ion-item>
+
+        <ion-item [button]="true" (click)=" paginaTecnologia()">
+          <ion-icon name="pulse-outline"></ion-icon>
+          <ion-label style="margin-left: 20px" >Tecnologia</ion-label>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>
+  
+  
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        <img style="width: 80%" src="../../assets/img/logo-text1.png" />
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-searchbar></ion-searchbar>
+
+    <ion-card>
+      <img src="../../assets/img/publi.jpg" />
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>Celulares</ion-card-content>
+      <img src="../../assets/img/cel2.jpg" />
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>Notbooks</ion-card-content>
+      <img src="../../assets/img/pc1.png" />
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>Computadores</ion-card-content>
+      <img src="../../assets/img/comp1.jpg" />
+    </ion-card>
+  </ion-content>
+</div>

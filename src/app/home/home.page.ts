@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { EmpresaPage } from '../empresa/empresa.page';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  component = HomePage;
+  constructor(public navCtrl: NavController) {}
 
-  constructor() {}
+  paginaHome() {
+    this.navCtrl.navigateForward('home');
+  }
 
+  paginaTecnologia() {
+    this.navCtrl.navigateForward('tecnologia');
+  }
+
+  
+  paginaEmpresa() {
+    this.navCtrl.navigateForward('empresa');
+  }
 }
